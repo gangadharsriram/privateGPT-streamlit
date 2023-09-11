@@ -41,6 +41,12 @@ EMBEDDINGS_MODEL_NAME: SentenceTransformers embeddings model name (see https://w
 TARGET_SOURCE_CHUNKS: The amount of chunks (sources) that will be used to answer a question
 ```
 
+in order to run it using streamlit ui
+
+```
+streamlit run app.py
+```
+
 Note: because of the way `langchain` loads the `SentenceTransformers` embeddings, the first time you run the script it will require internet connection to download the embeddings model itself.
 
 ## Test dataset
@@ -93,6 +99,15 @@ If you want to start from an empty database, delete the `db` folder.
 Note: during the ingest process no data leaves your local environment. You could ingest without an internet connection, except for the first time you run the ingest script, when the embeddings model is downloaded.
 
 ## Ask questions to your documents, locally!
+
+In order to ask a question and use streamlit ui, run a command like:
+
+
+```shell
+streamlit run app.py
+```
+
+
 In order to ask a question, run a command like:
 
 ```shell
